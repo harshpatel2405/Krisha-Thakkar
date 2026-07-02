@@ -1,0 +1,47 @@
+Javascript
+----------
+It's a programming language 
+logic 
+
+HTML CSS JS 
+skeleton
+Skin and muscles 
+functionalities of body 
+
+DOM -- Document object model 
+HTML ->
+
+Server -> HTML -> DOM (tree structure of html page) -> css  -
+
+
+browser- > html 
+console(vs) -> node js 
+
+Document
+--------
+browser screen 
+
+
+<script>
+
+
+External js and internal js 
+console.log 
+document 
+
+no data types 
+scope present -- function , global scope and block scope
+function -- var -- can be updated 
+block    -- let -- can be updated 
+         -- const -- cannot be updated
+
+dialog boxes 
+------------
+1. alert 
+2. prompt 
+3. confirm 
+
+operators 
+---------
+10 / 4 = 2.5
+parseInt(10 / 4)

@@ -1,0 +1,12 @@
+if_else
+    if 
+    if_else
+    else if ladder
+    nested if..else 
+
+switch_case 
+    normal switch_case
+    nested switch_case
+ternary operator 
+    normal ternary operator
+    nested ternary operator

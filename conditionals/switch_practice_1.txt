@@ -1,0 +1,168 @@
+SWITCH .. CASE TASK 
+-------------------
+1) Take a number (1–7) and print the day of the week.
+2) Take a number (1–12) and print the corresponding month name.
+3) Enter a number (1–4) and print the season (Spring, Summer, Monsoon, Winter).
+4) Take a character (+, -, *, /) and two numbers. Perform the corresponding operation.
+5) Enter a grade (A, B, C, D, F). Print remark using switch.
+6) Enter a number and print if it is even or odd using switch.
+7) Enter a number and print if it is vowel (a, e, i, o, u) or consonant using switch.
+8) Enter a traffic light color (r/g/y) and print the message (Stop / Wait / Go).
+
+9) Menu-driven program:
+   1. Area of Circle
+   2. Area of Rectangle
+   3. Area of Triangle
+   4. Exit
+
+10) Create a calculator with menu:
+    1. Add
+    2. Subtract
+    3. Multiply
+    4. Divide
+    5. Modulo / modulus
+
+11) Enter electricity units:
+    Use switch with ranges (0-100, 101–200, etc.) to print cost per unit.
+	
+	0–100 units → ₹2/unit
+	101–300 units → ₹3/unit
+	301–500 units → ₹5/unit
+	500 units → ₹8/unit
+
+
+12) Take a month number and print number of days in that month.
+
+13) Enter a grade (A–F), print GPA equivalent using switch.
+
+14) Enter a digit (0–9) and print its word form ("Zero", "One", ...).
+
+15) Simulate a simple ATM:
+    1. Check Balance
+    2. Withdraw
+    3. Deposit
+    4. Exit
+	
+16) Build a basic billing system:
+    1. Food Item A – ₹50
+    2. Food Item B – ₹100
+    3. Food Item C – ₹70
+    Take item code & quantity → Calculate total → Use switch.
+
+17) Temperature conversion menu:
+    1. Celcius to Farenheit
+    2. Farenheit to Celcius
+    3. Celcius to Kelvin
+    4. Exit
+
+18) Create a currency converter using switch:
+    1. INR to USD
+    2. USD to EUR
+    3. EUR to INR
+
+19) Create a basic calendar:
+    Input: Month & Year → Print number of days (handle leap year with logic + switch)
+
+20) Railway ticket booking system:
+    1. Book Ticket
+    2. Cancel Ticket
+    3. View Ticket
+    4. Exit
+    (Use switch to simulate each case)
+
+21) Digital Voting Machine:
+    Candidates: A, B, C
+    User votes multiple times
+    Show results using switch at end
+
+22) Create a switch-based quiz:
+    Ask 3–5 questions → Use switch to check answer and score
+	
+	
+NESTED SWITCH CASE 
+------------------
+1) Enter a country code:
+   1. India
+   2. USA
+   3. UK
+   Then enter a city code (use nested switch):
+   - India → 1. Delhi, 2. Mumbai
+   - USA   → 1. New York, 2. Texas
+   - UK    → 1. London, 2. Manchester
+   
+2) University Result Checker:
+   - Enter Course (1 for BTech, 2 for BSc)
+   - Then enter Year (1, 2, 3, 4)
+   - Print: "You are in BTech Year 2" etc.
+   
+3) Vehicle Service Center:
+   - Enter Vehicle Type: 1. Car  2. Bike
+   - Then enter Service Type:
+     - For Car: 1. Oil Change, 2. Full Service
+     - For Bike: 1. Chain Check, 2. General Service
+	
+4)  Train Booking System:
+   - Choose Class: 1. AC, 2. Sleeper
+   - Then Choose Train Type:
+     - AC → 1. Rajdhani, 2. Shatabdi
+     - Sleeper → 1. Express, 2. Local
+   - Then choose time slot: 1. Morning, 2. Night
+  -Also calculate price of ticket and also get the qty and then total price ..
+   
+5) Billing Portal:
+   - Select Customer Type: 1. Regular, 2. Premium
+   - Then choose Product Type:
+     - Regular → 1. Grocery, 2. Daily-use
+     - Premium → 1. Luxury, 2. Electronics
+   - Apply discount using nested logic inside switch.
+   
+6) Starbucks Menu Program 
+	Starbucks:
+
+	1. Coffee:
+	- Cappuccino
+	- Latte
+	- Espresso
+	- Americano
+	- Mocha
+
+	2. Tea:
+	- Green Tea
+	- Black Tea
+	- Herbal Tea
+	- Chai Tea
+	- Earl Grey Tea
+
+	3. Milk:
+	- Whole Milk
+	- Skim Milk
+	- Soy Milk
+	- Almond Milk
+	- Oat Milk
+
+	4. Juice:
+	- Orange Juice
+	- Apple Juice
+	- Cranberry Juice
+	- Pineapple Juice
+	- Grapefruit Juice
+
+	5. Water:
+	- Still Water
+	- Sparkling Water
+	- Flavored Water
+	- Mineral Water
+	- Infused Water
+
+	6. Soda:
+	- Cola
+	- Lemon-Lime Soda
+	- Ginger Ale
+	- Root Beer
+	- Orange Soda
+
+	7. Exit: This option allows you to exit the program.
+
+	every case will have 3 options 1. small 2. medium 3. large
+	
+	
