@@ -73,7 +73,7 @@ Nested Loop
 11) Print all numbers that are both Prime and Palindrome.
 12) Print all Magic Numbers (Repeated digit sum = 1) between sp and ep.
 13) Print all Strong numbers in the given range.
-14) Print all Automorphic numbers between sp and ep.
+14) Print all  numbers between sp and ep.
 15) Print all Spy numbers (sum of digits = product of digits) in range.
 16) Print all numbers in range whose digits are strictly increasing (e.g., 123, 358).
 17) Print all numbers in range that are Harshad numbers (divisible by sum of digits).
