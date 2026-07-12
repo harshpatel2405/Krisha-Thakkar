@@ -85,11 +85,11 @@ Patterns
 --------
 
 Pattern Questions 
-1) Solid Rectangle Pattern
-   *****
-   *****
-   *****
-
+1) Solid Rectangle Pattern 
+   ***** 
+   ***** 
+   ***** 
+   
 2) Right-Angled Triangle
    *
    * *

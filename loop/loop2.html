@@ -1,0 +1,24 @@
+<!-- // Enter a character. Print: 
+    // "Uppercase Letter" if capital, 
+    // "Not Uppercase" otherwise. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ch = prompt("enter a letter:")
+        let code = ch.charCodeAt(0)
+        console.log(code)
+        if (code >= 65 && code <= 90) {
+           console.log("You have entered an uppercase letter")
+        }
+        else if (code >= 97 && code <= 122) {
+            console.log("You have entered an lowercase letter")
+        }
+    </script>
+</body>
+</html>
