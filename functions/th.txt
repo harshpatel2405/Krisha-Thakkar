@@ -1,0 +1,42 @@
+Function 
+--------
+
+a block of code which can be used again and again 
+
+functionName()
+
+function functionName(args)  --> declaration
+{
+    logic
+    # return value; // * if there
+}
+args(a,b)
+
+let ans;
+
+ ans = function (args)  --> definition / expression
+{
+    logic
+    # return value; // * if there
+}
+
+let vs var vs const  vs global 
+
+Function special --> first class citizen (high level objects)
+1. you can store it in variable 
+2. you can pass function as an args
+3. Function can be returned
+4. it has hoisting feature   -> calling before defining 
+
+
+Parameters and arguments 
+------------------------
+function functionName(a,b)
+{
+    # logic
+}
+
+functionName(10,20)
+
+a and b are Parameters -- formal parameters
+10 and 20 are arguments -- actual parameters
