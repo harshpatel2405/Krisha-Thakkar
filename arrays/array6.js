@@ -13,7 +13,7 @@ const bannedWords = ["idiot", "stupid", "fool"];
 // * Display all chat messages with numbering.
 let k = 1;
 for (let i of chats) {
-  console.log(k++ + "." + i);
+  console.log(k++ + ". " + i);
 }
 
 /*
@@ -21,15 +21,44 @@ for (let i of chats) {
  *
  * If a message contains any banned word, replace * that word with "****".
  */
-let data
+let blockedMessages = 0;
+let cleanMessages = 0;
+let totalMessages = 0;
+let filteredChats = [];
 for (let i of chats) {
-    data =""
-  for (let j in bannedWords) {
-    if (i.includes(j)) {
-      data += "****"
+  let words = i.split(" ");
+  let filteredMessage = [];
+  for (let j of words) {
+    if (bannedWords.includes(j.toLowerCase())) {
+      filteredMessage.push("****");
       continue;
     }
-    data += i
+    filteredMessage.push(j);
   }
-  console.log(data )
+  totalMessages++;
+  filteredChats.push(filteredMessage);
+  if (filteredMessage.includes("****")) {
+    blockedMessages++;
+    continue;
+  }
+  cleanMessages++;
+}
+
+console.log("Total Messages (filtered Version) : " + totalMessages);
+for (let i of filteredChats) {
+  console.log(i.join(" "));
+}
+
+console.log("\n\nBlocked Messages : " + blockedMessages);
+for (let i of filteredChats) {
+  if (i.includes("****")) {
+    console.log(i.join(" "));
+  }
+}
+
+console.log("\n\nClean Messages : " + cleanMessages);
+for (let i of filteredChats) {
+  if (!i.includes("****")) {
+    console.log(i.join(" "));
+  }
 }
