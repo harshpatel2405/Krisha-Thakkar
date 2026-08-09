@@ -1,0 +1,30 @@
+DOM 
+---
+Document Object Model
+
+HTMl -> Server -> Tree Structure
+
+1. Access Element 
+2. Update Element
+3. Remove Element
+4. Add Element
+5. Modify CSS
+
+1. DOM FORM 
+2. Selectors 
+3. create and delete
+3. JSON / Object 
+
+<============================================>
+DOM FORM 
+--------
+name -> attribute
+getElementbyId
+
+<===============================================>
+It will treat tag as normal text
+innerText = "This is Manipulated " + name
+
+Will treat tag as tag
+innerHTML 
+

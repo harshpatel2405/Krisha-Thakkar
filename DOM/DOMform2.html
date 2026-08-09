@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM FORM 2(Gender)</h1>
+    <form name="f">
+        <label>Gender : </label>
+        <input type="radio" value="male" name="gender">Male
+        <input type="radio" value="female" name="gender">Female
+
+        <br>
+        <button type="button" onclick="getGender()">Submit</button>
+
+        <h3 id="print"></h3>
+
+        <script>
+            let gen = 'N/A'
+            function getGender() {
+                let gender = document.f.gender
+                let print = document.getElementById("print")
+                console.log(gender.value)
+                if (gender.value != '') {
+                    gen = gender.value
+                    print.innerText = "Gender : " + gen
+                    print.style.color = 'green'
+                }
+                else {
+                    print.style.color = 'red'
+                    print.innerText = "Select Any Gender"
+                }
+            }
+        </script>
+    </form>
+</body>
+
+</html>
+
+<!-- 
+* Form 
+* Name , age , marks , address(textarea) (input from user and print on screen as well)
+* marks >= 50 , Status : "Pass" , else Status : "Fail"
+* 
+ -->

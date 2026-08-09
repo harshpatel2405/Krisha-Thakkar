@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM FORM 1</h1>
+    <form>
+        <label for="name" id="label">Full Name : </label>
+        <input id="name">
+
+        <button type="button" onclick="getname()">Submit</button>
+
+
+        <p id="print"></p>
+
+        <script>
+            let fullName = document.getElementById("name")
+            let label = document.getElementById("label")
+            let print = document.getElementById("print")
+            function getname() {
+                console.log(fullName.value)
+                print.innerText = "Name : " + fullName.value
+                print.style.color = "Yellow"
+                print.style.background = "blue"
+
+                // console.log("Document : " + document)
+                // console.log("Document Title : " + document.head.title.textContent)
+                console.log(fullName.placeholder)
+                console.log(fullName.id)
+                console.log(fullName.type)
+                // print.innerHTML = `<b>Name : ${fullName.value}</b>`
+            }
+
+            let ans = parseInt(prompt("1. Number\n2. Text\n3. Date"));
+            if (ans == 1) {
+                fullName.type = "number"
+                fullName.placeholder = "Enter a number : "
+                label.innerText = "Number : ";
+            }
+            else if (ans == 2) {
+                fullName.type = "text"
+                fullName.placeholder = "Enter a text : "
+                label.innerText = "Text : ";
+            }
+            else if (ans == 3) {
+                fullName.type = "date"
+                fullName.placeholder = "Enter a date : "
+                label.innerText = "Date : ";
+            }
+
+        </script>
+    </form>
+</body>
+
+</html>
