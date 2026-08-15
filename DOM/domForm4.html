@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        input {
+            background-color: aliceblue;
+            outline: none;
+            border: 1px solid black;
+            border-radius: 6px;
+            height: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        select {
+            background-color: aliceblue;
+        }
+
+        button {
+            background-color: blueviolet;
+            border: 2px solid greenyellow;
+            height: 30px;
+            width: 70px;
+            font-size: 18px;
+            border-radius: 7px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Form Demo 4</h1>
+
+    <form name="product">
+        <table border="1" cellspacing="0" cellpadding="3" align="center" width="70%" height="250px">
+            <tr>
+                <td align="center">
+                    <label>Enter Product ID </label>
+                </td>
+                <td>
+                    <input type="text" name="pid" placeholder="Enter Product ID">
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><label>Select Product Category</label></td>
+                <td>
+                    <select name="category">
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="machinery">Machinery</option>
+                        <option value="grocery">Grocery</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><label>Enter Quantity</label></td>
+                <td>
+                    <input type="number" name="qty" placeholder="Enter Quantity">
+                </td>
+            </tr>
+
+            <tr>
+                <td align="center"><label>Select Purchasing Type</label></td>
+                <td>
+                    <input name="type" value="new" type="radio"> New
+                    <input name="type" value="old" type="radio"> Old
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><label>Select Features you want to add</label></td>
+                <td>
+                    <input name="features" value="creditCard" type="checkbox"> Credit card (10% SBI)<br>
+                    <input name="features" value="paytm" type="checkbox"> Paytm (20% Disocunt (min Order Value
+                    9999))<br>
+                    <input name="features" value="emi" type="checkbox"> EMI (On Selected card only)
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="button" onclick="printData()">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h3 id="print"></h3>
+
+    <script>
+        let id = document.product.pid;
+        let category = document.product.category;
+        let qty = document.product.qty;
+        let type = document.product.type;
+        let features = document.product.features;
+
+        let print = document.getElementById("print")
+
+        function printData() {
+            let arr = []
+            vid = id.value;
+            vct = category.value;
+            vqty = qty.value;
+            vtype = type.value;
+
+            for (let i in features) {
+                if (features[i].checked) {
+                    arr.push(" "+features[i].value + " ")
+                }
+            }
+            console.log(arr)
+
+            print.innerText = "ID : " + vid + "\n" + "Category : " + vct + "\nQuantity : " + vqty + "\nType : " + vtype + "\nFeatures : " + arr
+
+        }
+
+    </script>
+</body>
+
+</html>

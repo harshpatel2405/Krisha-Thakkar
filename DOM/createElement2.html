@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>Array</h1>
+    </center>
+
+    <label for="val">Enter Value : </label>
+    <input id="val" type="number" placeholder="Enter a value">
+    <button type="button" onclick="addNumber()">Add in Array</button>
+    <button type="button" onclick="removeNumber()">Remove From Array</button>
+    <button type="button" onclick="addition()">Sum of Marks</button>
+
+    <h5 id="arrayPrint"></h5>
+    <h4 id="warning"></h4>
+    <h5 id="sum"></h5>
+
+    <div id="box"></div>
+
+    <script>
+        let warning = document.getElementById("warning")
+        let ap = document.getElementById("arrayPrint")
+        let box = document.getElementById("box")
+        let sum = document.getElementById("sum")
+        let arr = [10, 20, 30, 40]
+        ap.innerHTML = arr
+
+        function addNumber() {
+            let userValue = document.getElementById("val")
+            ans = userValue.value
+            ans = parseInt(ans)
+            console.log(ans)
+            if (userValue.value == '' || ans < 0) {
+                warning.innerText = "Value should not empty or it should be greater than 0"
+                warning.style.color = "orange"
+            } else {
+                warning.innerHTML = ''
+                arr.push(ans)
+            }
+
+            sum.innerHTML = ''
+            box.innerHTML = ''
+            userValue.value = ''
+            ap.innerText = arr
+        }
+
+        function removeNumber() {
+            if (arr.length == 0) {
+                warning.innerText = "There are no elements present which can be removed"
+                warning.style.color = 'red'
+
+                return;
+            }
+
+            // label tag
+            let label1 = document.createElement('label')
+            label1.innerHTML = 'Select Choice : '
+            box.appendChild(label1)
+
+
+            // * creates a new tag input and store it in input1
+            let input1 = document.createElement('input')
+            input1.setAttribute('type', 'number')
+            input1.setAttribute('placeholder', '1. Value\t2. Index')
+            input1.id = 'choice'
+
+            box.appendChild(input1)
+
+            // label tag
+            let button1 = document.createElement('button')
+            button1.innerHTML = 'Submit Choice'
+            button1.setAttribute('onclick', 'getChoice()')
+            button1.setAttribute('type', 'button')
+            box.appendChild(button1)
+
+
+            // arr.pop()
+            // sum.innerHTML = ''
+            // ap.innerText = arr
+        }
+
+        function getChoice() {
+            console.log("Get Choice Called")
+        }
+        function addition() {
+            if (arr.length == 0) {
+                warning.innerText = "There are no elements present to do the sum"
+                warning.style.color = '#DC143C'
+
+                return;
+            }
+
+            let add = 0;
+            for (let num of arr) {
+                add += num;
+            }
+
+            sum.innerHTML = 'SUM : ' + add
+            box.innerHTML = ''
+        }
+    </script>
+</body>
+
+</html>

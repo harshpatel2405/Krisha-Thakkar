@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            border: 2px solid black;
+            height: 30px;
+        }
+        h3
+        {
+            border:2px solid blue;
+            padding-left:10px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Create Element</h1>
+    <div id="box">
+
+    </div>
+
+    <button type="button" onclick="printData()">click to get Data</button>
+    <script>
+        let box = document.getElementById('box')
+        let height = 30;
+        function printData()
+        {
+            let data = document.createElement("h3")
+            data.innerText = "This is created with the help of create element"
+            box.appendChild(data)
+            height += 50
+            box.style.height =`${height}px`
+        }
+    </script>
+</body>
+
+</html>

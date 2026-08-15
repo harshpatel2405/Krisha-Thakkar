@@ -1,0 +1,53 @@
+<!-- Form
+* Name , age , marks , address(textarea) (input from user and print on screen as well)
+* marks >= 50 , Status : "Pass" , else Status : "Fail" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM FORM (DETAILS)</h1>
+    <form name="f">
+        <label>Enter Name : </label><input type="text" name="Name" placeholder="Enter your name:"><br>
+        <label>Enter Age : </label> <input type="number" name="age" placeholder="Enter your age:">
+        <br>
+        <!-- <input type="" value="age" name="age" placeholder="Enter your age:">
+          -->
+        <label>Enter Marks : </label><input type="number" name="marks" placeholder="Enter your marks:"><br>
+        <label>Enter Address : </label><textarea name="address" placeholder="Enter your address:"></textarea>
+        <br>
+        <button type="button" onclick="getData()">Submit</button>
+        <h3 id="print"></h3>
+        <script>
+            let m = 0
+            function getData() {
+                let marks = document.f.marks
+                let name = document.f.Name
+                let print = document.getElementById("print")
+                n = name.value
+                m = parseFloat(marks.value)
+                if (n != '' && m != '') {
+                    if (m > 50) {
+                        print.innerText = "Name : " + n + "\nMarks : " + m + "\nStatus : Pass";
+                        print.style.color = 'green'
+                    } else {
+                        print.innerText = "Name : " + n + "\nMarks : " + m + "\nStatus : Fail";
+                        print.style.color = 'green'
+                    }
+                }
+                else {
+                    print.innerText = "Marks or name should not be empty"
+                    print.style.color = 'red'
+                }
+
+            }
+        </script>
+    </form>
+</body>
+
+</html>
