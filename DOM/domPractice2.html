@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .video-container {
+            width: 400px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="video-container">
+        <video src="me.mp4" controls id="data" autoplay></video>
+    </div>
+    <button onclick="changeVideo()">Video Toggle</button>
+
+    <script>
+        let videos = ['f1.mp4', 'Penguin.mp4', 'bear.mp4', 'me.mp4']
+        let index;
+        let data = document.getElementById('data')
+        let lastData = 0;
+
+        function changeVideo() {
+            index = Math.floor(Math.random() * (3 - 0 + 1)) + 0
+
+            while (lastData == index) {
+                index = Math.floor(Math.random() * (3 - 0 + 1)) + 0
+            }
+
+            data.src = videos[index]
+            lastData = index;
+        }
+    </script>
+</body>
+
+</html>

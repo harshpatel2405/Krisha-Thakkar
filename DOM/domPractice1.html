@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div {
+            width: 300px;
+            height: 210px;
+            border: 3px solid black;
+            padding-left: 83px;
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg" id="bulbImage">
+    </div>
+    <button onclick="changeImage()" type="button">Click to toggle bulb</button>
+    <span id="data">Status : OFF</span>
+    <br>
+    <button onclick="changecolor()" type="button">Click to change color</button>
+    <span id="color">Color : White</span>
+    <script>
+        let bulb = document.getElementById("bulbImage")
+        let data = document.getElementById("data")
+        let color = document.getElementById("color")
+        let div = document.getElementsByTagName("div")
+        console.log(div[0])
+        let bulbStatus = false;
+        function changeImage() {
+            if (bulbStatus) {
+                bulb.setAttribute('src', "https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg")
+            }
+            else {
+                bulb.setAttribute('src', "https://media.geeksforgeeks.org/wp-content/uploads/ONbulb.jpg")
+            }
+            bulbStatus = !bulbStatus;
+            data.innerHTML = `<b>Status : ${bulbStatus ? "ON" : "OFF"}</b>`
+        }
+
+        let colors = ['red', 'green', 'blue', 'yellow', 'violet', 'purple', 'orange', 'pink', 'brown', 'black', 'white', 'gray', 'cyan', 'magenta', 'lime', 'navy', 'teal', 'maroon', 'olive', 'silver', 'gold', 'coral', 'indigo', 'turquoise', 'beige', 'crimson', 'lavender', 'peach', 'aqua', 'khaki'
+        ];
+        let index = 0;
+        function changecolor() {
+            index = Math.floor(Math.random() * (29 - 0 + 1)) + 0;
+            color.innerHTML = `<b>Color : ${colors[index]}`
+            div[0].style.backgroundColor = colors[index]
+        }
+    </script>
+</body>
+
+</html>

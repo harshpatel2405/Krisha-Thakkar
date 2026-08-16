@@ -5,6 +5,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Main Heading */
+        center h1 {
+            margin-bottom: 30px;
+            color: #2c3e50;
+            font-size: 32px;
+        }
+
+        /* Input */
+        #val {
+            width: 220px;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        #val:focus {
+            border-color: #3498db;
+        }
+
+        /* Buttons */
+        button {
+            padding: 10px 16px;
+            margin-left: 8px;
+            border: none;
+            border-radius: 6px;
+            background: #3498db;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        /* Array Display */
+        #arrayPrint {
+            margin-top: 30px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        /* Warning */
+        #warning {
+            margin-top: 15px;
+            min-height: 20px;
+            font-size: 14px;
+        }
+
+        /* Sum */
+        #sum {
+            margin-top: 15px;
+            padding: 12px;
+            background: #eafaf1;
+            border-left: 4px solid #27ae60;
+            border-radius: 5px;
+            color: #219150;
+            font-size: 18px;
+        }
+
+        /* Dynamic Box */
+        #box {
+            margin-top: 25px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Dynamic Labels */
+        #box label {
+            margin-right: 8px;
+            font-size: 15px;
+            color: #34495e;
+        }
+
+        /* Dynamic Inputs */
+        #box input {
+            padding: 9px 10px;
+            margin: 8px 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        #box input:focus {
+            border-color: #3498db;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            #val {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin: 5px 3px;
+            }
+
+            #box {
+                overflow-x: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +174,7 @@
             ans = parseInt(ans)
             console.log(ans)
             if (userValue.value == '' || ans < 0) {
-                warning.innerText = "Value should not empty or it should be greater than 0"
+                warning.innerText = "Value should not be empty or negative"
                 warning.style.color = "orange"
             } else {
                 warning.innerHTML = ''
@@ -58,14 +194,14 @@
 
                 return;
             }
-
-            // label tag
+            box.innerHTML = ''
+            // // label tag
             let label1 = document.createElement('label')
             label1.innerHTML = 'Select Choice : '
             box.appendChild(label1)
 
 
-            // * creates a new tag input and store it in input1
+            // // * creates a new tag input and store it in input1
             let input1 = document.createElement('input')
             input1.setAttribute('type', 'number')
             input1.setAttribute('placeholder', '1. Value\t2. Index')
@@ -73,7 +209,7 @@
 
             box.appendChild(input1)
 
-            // label tag
+            // // label tag
             let button1 = document.createElement('button')
             button1.innerHTML = 'Submit Choice'
             button1.setAttribute('onclick', 'getChoice()')
@@ -82,12 +218,121 @@
 
 
             // arr.pop()
-            // sum.innerHTML = ''
-            // ap.innerText = arr
+            sum.innerHTML = ''
+            ap.innerText = arr
+            
         }
 
         function getChoice() {
-            console.log("Get Choice Called")
+            let choiceData = document.getElementById('choice')
+            let val = parseInt(choiceData.value)
+            if (choiceData.value == '' || val < 0 || val > 2) {
+                warning.innerText = 'Enter a proper value to check'
+                warning.style.color = 'red'
+                
+                return;
+            }
+            choiceData.value = ''
+            // Remove previous box2 if it exists
+            let oldBox = document.getElementById('box2')
+
+            if (oldBox) {
+                oldBox.remove()
+            }
+
+
+            // let break1 = document.createElement('br')
+            // box.appendChild(break1)
+            let label2 = document.createElement('label')
+            let input2 = document.createElement('input')
+            let button2 = document.createElement('button')
+
+            if (val == 1) {
+                label2.innerHTML = 'Enter Value :'
+                input2.id = 'getValue'
+                input2.setAttribute('type', 'number')
+                button2.setAttribute('onclick', 'getValue()')
+                input2.setAttribute('placeholder', 'Enter Value to be deleted')
+                button2.setAttribute('type', 'button')
+                button2.innerText = 'Send Value'
+            } else if (val == 2) {
+                label2.innerHTML = 'Enter Index :'
+                input2.id = 'getIndex'
+                input2.setAttribute('type', 'number')
+                button2.setAttribute('onclick', 'getIndex()')
+                input2.setAttribute('placeholder', 'Enter Index to be deleted')
+                button2.setAttribute('type', 'button')
+                button2.innerText = 'Send Index'
+
+            }
+
+
+            let box2 = document.createElement('div')
+            box2.id = 'box2'
+            box2.appendChild(label2)
+            box2.appendChild(input2)
+            box2.appendChild(button2)
+
+            box.appendChild(box2)
+        }
+
+        function getValue() {
+            let valueData = document.getElementById('getValue')
+
+            let val = parseInt(valueData.value)
+            if (valueData.value == '' || val < 0) {
+                warning.innerText = 'Enter a proper value to check'
+                warning.style.color = 'red'
+
+                return;
+            }
+
+            console.log("Value Entered by user to delete : " + val)
+
+            valueData.value = ''
+            let i = arr.indexOf(val)
+            if (i < 0) {
+                warning.innerText = 'Value Not Present in the array'
+                warning.style.color = 'red'
+                return;
+            }
+
+            while ((i = arr.indexOf(val)) !== -1) {
+                arr.splice(i, 1);
+            }
+
+            warning.innerText = 'Element ' + val + " removed successfully"
+            warning.style.color = 'green'
+
+            ap.innerHTML = arr;
+
+
+        }
+        function getIndex() {
+            let IndexData = document.getElementById('getIndex')
+
+            let val = parseInt(IndexData.value)
+            if (IndexData.value == '' || val < 0) {
+                warning.innerText = 'Enter a proper value to check'
+                warning.style.color = 'red'
+
+                return;
+            }
+
+            console.log("Index Entered by user to delete : " + val)
+
+
+            if (val >= arr.length) {
+                warning.innerText = 'Index Not Present in the array'
+                warning.style.color = 'red'
+                return;
+            }
+
+            warning.innerText = 'Element at index ' + val + " removed successfully"
+            arr.splice(val, 1)
+            warning.style.color = 'green'
+
+            ap.innerHTML = arr;
         }
         function addition() {
             if (arr.length == 0) {
