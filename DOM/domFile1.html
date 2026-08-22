@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        #data2 {
+            width: 90%;
+            min-height: 250px;
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #data2 h1 {
+            color: white;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #data2 h5 {
+            background-color: #eee;
+            padding: 10px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .definitions {
+            width: 90%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #333;
+        }
+
+        .definitions h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .definitions p {
+            line-height: 1.6;
+        }
+
+        .definitions b {
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        Create Element | Append | AppendChild | Remove | RemoveChild
+    </h2>
+
+    <div id="data2"></div>
+
+    <div class="buttons">
+
+        <button onclick="getData1()">
+            Append Child
+        </button>
+
+        <button onclick="getData2()">
+            Append
+        </button>
+
+        <button onclick="getData3()">
+            Remove Child
+        </button>
+
+        <button onclick="getData4()">
+            Remove Data2
+        </button>
+
+    </div>
+
+
+    <!-- Definitions -->
+
+    <div class="definitions">
+
+        <h3>DOM Methods Used</h3>
+
+        <p>
+            <b>1. createElement()</b><br>
+            Creates a new HTML element using JavaScript.
+        </p>
+
+        <p>
+            <b>2. appendChild()</b><br>
+            Adds a single Node as the last child of an element.
+        </p>
+
+        <p>
+            <b>3. append()</b><br>
+            Adds text or one or more Nodes at the end of an element.
+        </p>
+
+        <p>
+            <b>4. querySelector()</b><br>
+            Selects the first HTML element that matches a CSS selector.
+        </p>
+
+        <p>
+            <b>5. removeChild()</b><br>
+            Removes a specific child element from its parent.
+        </p>
+
+        <p>
+            <b>6. remove()</b><br>
+            Removes the selected element itself from the DOM.
+        </p>
+
+    </div>
+
+
+    <script>
+
+        let count = 0;
+
+        let data2 = document.querySelector("#data2");
+
+
+        // createElement() + appendChild()
+        function getData1() {
+
+            let heading1 = document.createElement("h1");
+
+            heading1.innerText =
+                "Heading 1 - " + count++;
+
+            heading1.className = "data3";
+
+            data2.appendChild(heading1);
+        }
+
+
+        // createElement() + append()
+        function getData2() {
+
+            let heading2 = document.createElement("h1");
+
+            let heading5 = document.createElement("h5");
+
+            heading2.innerText = "Heading 2";
+
+            heading5.innerText = "Heading 5";
+
+            data2.append(
+                "Hello World",
+                heading2,
+                heading5
+            );
+        }
+
+
+        // querySelector() + removeChild()
+        function getData3() {
+
+            let heading3 =
+                document.querySelector(".data3");
+
+            if (heading3) {
+                data2.removeChild(heading3);
+            }
+        }
+
+
+        // remove()
+        function getData4() {
+
+            data2.remove();
+
+        }
+
+    </script>
+
+</body>
+
+</html>

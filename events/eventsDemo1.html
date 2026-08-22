@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Count : 0</h1>
+    <button onclick="clickEvent()">Single click to add</button>
+    <button ondblclick="doubleclickEvent()">Double click to Subtract</button>
+    <button ondblclick="doubleclickEvent()">Double click to Subtract</button>
+    <button onmouseenter="mouseEnter()">Mouse Enters background color will become red</button>
+    <button onmouseleave="mouseleave()">Mouse Enters background color will become blue</button>
+    <button onmousedown="mousedown()">mouse clicked</button>
+    <button onmouseup="mouseup()">Mouse click released</button>
+
+
+    <script>
+        let counter = 0;
+        let heading1 = document.querySelector("h1")
+        function clickEvent() {
+            counter += 1
+            heading1.innerText = "Count : " + counter
+        }
+        function doubleclickEvent() {
+            counter -= 1
+            heading1.innerText = "Count : " + counter
+        }
+        function mouseEnter() {
+            heading1.style.backgroundColor = "red"
+        }
+        function mouseleave() {
+            heading1.style.backgroundColor = "blue"
+        }
+
+        function mousedown() {
+            heading1.style.backgroundColor = "yellow"
+        }
+        function mouseup() {
+            heading1.style.backgroundColor = "green"
+        }
+    </script>
+</body>
+
+</html>

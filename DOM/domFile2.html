@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM Methods</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        #data2 {
+            width: 90%;
+            min-height: 250px;
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #data2 h4 {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .definitions {
+            width: 90%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #333;
+        }
+
+        .definitions h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .definitions p {
+            line-height: 1.6;
+        }
+
+        .definitions b {
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        Prepend | Before | After | InsertBefore | ReplaceChild
+    </h2>
+
+    <div id="data2">
+
+        <h4>Second</h4>
+        <h4>Third</h4>
+        <h4 id="mid">Four</h4>
+        <h4>Fifth</h4>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button onclick="getData1()">
+            Prepend
+        </button>
+
+        <button onclick="getData2()">
+            Before
+        </button>
+
+        <button onclick="getData3()">
+            After
+        </button>
+
+        <button onclick="getData4()">
+            InsertBefore
+        </button>
+
+        <button onclick="getData5()">
+            Replace Child
+        </button>
+
+    </div>
+
+
+    <!-- Definitions -->
+
+    <div class="definitions">
+
+        <h3>DOM Methods - Definitions</h3>
+
+        <p>
+            <b>1. prepend()</b><br>
+            Adds new content at the beginning of the selected element.
+            The new content becomes the first child.
+        </p>
+
+        <p>
+            <b>2. before()</b><br>
+            Adds new content before the selected element.
+            The new element becomes a sibling of the selected element.
+        </p>
+
+        <p>
+            <b>3. after()</b><br>
+            Adds new content after the selected element.
+            The new element becomes a sibling of the selected element.
+        </p>
+
+        <p>
+            <b>4. insertBefore()</b><br>
+            Adds a new element before a specific child element
+            inside a parent element.
+        </p>
+
+        <p>
+            <b>5. replaceChild()</b><br>
+            Replaces an existing child element with a new element.
+        </p>
+
+        <p>
+            <b>6. createElement()</b><br>
+            Creates a new HTML element using JavaScript.
+        </p>
+
+        <p>
+            <b>7. getElementById()</b><br>
+            Selects an HTML element using its ID.
+        </p>
+
+        <p>
+            <b>8. innerText</b><br>
+            Gets or changes the visible text inside an HTML element.
+        </p>
+
+        <p>
+            <b>9. innerHTML</b><br>
+            Gets or changes the HTML content inside an element.
+        </p>
+
+        <p>
+            <b>10. setAttribute()</b><br>
+            Adds or changes an attribute of an HTML element.
+        </p>
+
+    </div>
+
+
+    <script>
+
+        let data2 = document.getElementById("data2");
+
+        let count = 0;
+
+
+        // prepend()
+        function getData1() {
+
+            let content1 =
+                document.createElement("h4");
+
+            content1.innerText =
+                "First -> " + count++;
+
+            data2.prepend(content1);
+        }
+
+
+        // before()
+        function getData2() {
+
+            let content1 =
+                document.createElement("h4");
+
+            content1.innerText =
+                "Before The Div tag as sibling";
+
+            data2.before(content1);
+        }
+
+
+        // after()
+        function getData3() {
+
+            let content1 =
+                document.createElement("h4");
+
+            content1.innerText =
+                "After The Div tag as sibling";
+
+            data2.after(content1);
+        }
+
+
+        // insertBefore()
+        function getData4() {
+
+            let content1 =
+                document.createElement("h4");
+
+            let midContent =
+                document.getElementById("mid");
+
+            content1.innerText =
+                "Added between Three and Four";
+
+            data2.insertBefore(
+                content1,
+                midContent
+            );
+        }
+
+
+        // replaceChild()
+        function getData5() {
+
+            let content1 =
+                document.createElement("p");
+
+            let midContent =
+                document.getElementById("mid");
+
+            content1.innerText =
+                "Four is replaced with this text";
+
+            content1.setAttribute("id", "mid");
+
+            data2.replaceChild(
+                content1,
+                midContent
+            );
+        }
+
+    </script>
+
+</body>
+
+</html>
