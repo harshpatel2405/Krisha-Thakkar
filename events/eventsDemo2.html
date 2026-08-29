@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 800px;
+            text-align: center;
+        }
+
+        /* Main Mouse Box */
+        #data {
+            width: 600px;
+            height: 300px;
+
+            margin: 0 auto 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 3px solid black;
+            border-radius: 15px;
+
+            background-color: white;
+        }
+
+        /* Bottom boxes */
+        .info-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Client and Screen boxes */
+        .info-box {
+            width: 300px;
+
+            padding: 20px;
+
+            border: 2px solid black;
+            border-radius: 10px;
+
+            background-color: white;
+        }
+
+        .info-box h2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Parent Mouse Box -->
+        <div id="data" onmousemove="mousemove(event)">
+            <h2>Move your mouse here</h2>
+        </div>
+
+        <!-- Information Boxes -->
+        <div class="info-container">
+
+            <div class="info-box">
+                <h2>Client X : <span id="clientX">0</span></h2>
+                <h2>Client Y : <span id="clientY">0</span></h2>
+            </div>
+
+            <div class="info-box">
+                <h2><label>Name : </label> <span ><input type="text" onkeydown="keydown(event)"></span></h2>
+                <h2><label>Name : </label> <span ><input type="text" onkeyup="keyup(event)"></span></h2>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let data = document.getElementById("data")
+        let clientX = document.getElementById("clientX")
+        let clientY = document.getElementById("clientY")
+
+
+
+        function mousemove(event) {
+
+            clientY.innerHTML = event.clientY
+            clientX.innerHTML = event.clientX
+        }
+
+        function keydown(event)
+        {
+            console.log(event.target.value)
+        }
+        function keyup(event)
+        {
+            if(event.target.value.includes('q'))
+            console.log("q")
+        }
+    </script>
+</body>
+
+</html>

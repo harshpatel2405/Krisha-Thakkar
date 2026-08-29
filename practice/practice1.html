@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping Cart</title>
+    <style>
+        /* =========================
+   BASIC PAGE DESIGN
+========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+
+        /* =========================
+   PRODUCT CONTAINER
+========================= */
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================
+   PRODUCT CARD
+========================= */
+
+        .card {
+            width: 220px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin-top: 5px;
+            color: #333;
+        }
+
+
+        /* =========================
+   PRODUCT IMAGE
+========================= */
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        /* =========================
+   PRICE
+========================= */
+
+        .price {
+            font-size: 17px;
+            font-weight: bold;
+            color: #444;
+        }
+
+
+        /* =========================
+   ADD TO CART BUTTON
+========================= */
+
+        .add-btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #007bff;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .add-btn:disabled {
+            background-color: #28a745;
+            cursor: not-allowed;
+        }
+
+
+        /* =========================
+   REMOVE BUTTON
+========================= */
+
+        .card>button:not(.add-btn) {
+            width: 100%;
+            margin-top: 10px;
+            padding: 9px;
+            border: none;
+            border-radius: 6px;
+            background-color: #dc3545;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .card>button:not(.add-btn):hover {
+            background-color: #b02a37;
+        }
+
+
+        /* =========================
+   CART
+========================= */
+
+        #cart {
+            width: 200px;
+            padding: 15px;
+            margin: 30px auto 0;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Products</h1>
+    <div class="container">
+        <div class="card">
+            <h3>Headphones</h3>
+            <img src="#" alt="Headphones">
+            <p class="price">Price: ₹5000</p>
+            <button id="btn1" class="add-btn" onclick="AddData('btn1')">
+                Add to Cart
+            </button>
+        </div>
+        <div class="card">
+            <h3>Phone</h3>
+            <img src="#" alt="Phone">
+            <p class="price">Price: ₹80000</p>
+            <button id="btn2" class="add-btn" onclick="AddData('btn2')">
+                Add to Cart
+            </button>
+        </div>
+        <div class="card">
+            <h3>Smart Watch</h3>
+            <img src="#" alt="Smart Watch">
+            <p class="price">Price: ₹2000</p>
+            <button id="btn3" class="add-btn" onclick="AddData('btn3')">
+                Add to Cart
+            </button>
+        </div>
+        <div class="card">
+            <h3>Mobile Charger</h3>
+            <img src="#" alt="Mobile Charger">
+            <p class="price">Price: ₹800</p>
+            <button id="btn4" class="add-btn" onclick="AddData('btn4')">
+                Add to Cart
+            </button>
+        </div>
+        <div id="cart">
+            Cart: 0
+        </div>
+    </div>
+    <script>
+        let cart = document.querySelector("#cart");
+        let c = 0;
+        let imagesLink = [
+            "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vYmlsZSUyMHBob25lfGVufDB8fDB8fHww",
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+            "https://images.unsplash.com/photo-1725304382197-663ae3864750?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwY2hhcmdlcnxlbnwwfHwwfHx8MA%3D%3D",
+        ];
+        let images = document.querySelectorAll("img");
+        for (let i in imagesLink) {
+            images[i].setAttribute("src", imagesLink[i]);
+        }
+
+        function AddData(buttonID) {
+            c += 1;
+            let ButtonClickedByUser = document.querySelector("#" + buttonID);
+
+            cart.innerHTML = "<b>Cart : " + c + "</b>";
+            ButtonClickedByUser.innerHTML = " Added to the Cart Successfully!!";
+            ButtonClickedByUser.disabled = true;
+
+            let removebtn = document.createElement("button");
+            removebtn.setAttribute("type", "button");
+            removebtn.innerText = "Remove From Cart";
+            let removebtnID = "remove" + buttonID;
+            removebtn.setAttribute("id", removebtnID);
+            let OriginalButtonID = buttonID;
+            removebtn.setAttribute(
+                "onclick",
+                "removeData('" + removebtnID + "', '" + OriginalButtonID + "')",
+            );
+            ButtonClickedByUser.after(removebtn);
+        }
+
+        function removeData(id, buttonName) {
+            let i = "#" + id;
+
+            let data = document.querySelector(i);
+
+            buttonName = document.querySelector("#" + buttonName);
+            buttonName.innerHTML = "Add to Cart";
+
+            c -= 1;
+            cart.innerHTML = "<b>Cart : " + c + "</b>";
+            data.remove();
+            buttonName.disabled = false;
+        }
+
+    </script>
+</body>
+
+</html>
