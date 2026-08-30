@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">Click to get greeting</h1>
+    <h2 id="snake">click on this to remove event listener from h1</h2>
+
+    <input type="submit">
+
+    <script>
+        let heading = document.querySelector("#heading")
+        let newHeading = heading.cloneNode(true)
+        console.log(newHeading)
+        function welcome1() {
+            alert("Welcome User 1")
+        }
+        heading.addEventListener('click', welcome1);
+        heading.addEventListener('click', function welcome2() {
+            alert("Welcome User 2")
+        })
+
+        heading.addEventListener('dblclick', callfunction)
+
+        function callfunction() {
+            console.log("Welcome User 3")
+        }
+
+        let snake = document.querySelector("#snake")
+
+        function callData() {
+            heading.removeEventListener('click', welcome1);
+            heading.replaceWith(newHeading)
+        }
+
+        snake.addEventListener('click', callData)
+
+    </script>
+
+</html>
