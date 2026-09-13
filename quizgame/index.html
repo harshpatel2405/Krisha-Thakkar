@@ -5,61 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        * {
-
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .main {
-            width: 100vw;
-            height: 100vh;
-            background-color: aliceblue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 100px;
-        }
-
-        .box {
-            background-color: rgb(102, 225, 241);
-            width: 70%;
-            height: 50%;
-            padding: 15px;
-            border-radius: 18px;
-        }
-
-        .box h1 {
-            padding-top: 20px;
-            padding-bottom: 15px;
-        }
-
-        .box p {
-            padding-left: 15px;
-            padding-right: 15px;
-            font-size: 1.2em;
-        }
-
-        button {
-            width: 130px;
-            height: 50px;
-            font-size: 1em;
-            border-radius: 30px;
-            outline: none;
-            border: 2px solid red;
-            background-color: orange;
-            font-weight: bold;
-            margin-top: 8px;
-        }
-    </style>
+    <style></style>
 </head>
 
 <body>
     <div class="main">
+        <h5 id="sc">SCORE : 0</h5>
         <div class="box">
             <h1>Welcome to my small Quiz Game built using HTML, CSS and vanilla JavaScript.</h1>
             <p>You will be presented with a series of questions and multiple choice answers to select from. Answer the
@@ -81,86 +32,106 @@
         let box = document.querySelector('.box')
         let main = document.querySelector('.main')
         let score = 0;
+        let index = 0;
         let questions = [
             {
-                que: "Javascript is same as java",
-                options: ["True", "False"],
-                correctChoice: "False"
+                que: "Which keyword is used to declare a variable in JavaScript?",
+                options: ["var", "int", "string", "define"],
+                correctChoice: "var"
             },
             {
-                que: "Javascript is not same as java",
-                options: ["True", "False"],
-                correctChoice: "True"
-            }
+                que: "Which symbol is used for a single-line comment in JavaScript?",
+                options: ["//", "/*", "#", "<!--"],
+                correctChoice: "//"
+            },
+            {
+                que: "Which method is used to print something in the browser console?",
+                options: ["console.log()", "print()", "display()", "write()"],
+                correctChoice: "console.log()"
+            },
+            {
+                que: "Which of the following is NOT a JavaScript data type?",
+                options: ["Number", "String", "Boolean", "Character"],
+                correctChoice: "Character"
+            },
+            {
+                que: "Which operator is used to compare both value and type?",
+                options: ["==", "=", "===", "!="],
+                correctChoice: "==="
+            },
         ];
 
+        let sc = document.querySelector('#sc')
         play.addEventListener('click', function () {
-            for (let i in questions) {
+            showQuestion();
+        });
 
-                box.innerHTML = '';
-                let question = document.createElement("h2");
-                question.innerText = questions[i].que;
-                const choices = questions[i].options;
-                let correctChoice = questions[i].correctChoice;
-                box.append(question);
-
-                for (let i = 0; i < choices.length; i++) {
-
-                    let option = document.createElement('input')
-                    let label = document.createElement('label')
-                    label.innerText = choices[i]
-                    option.setAttribute('type', "radio")
-                    option.setAttribute('name', "answer")
-                    option.setAttribute('class', "opt")
-                    option.setAttribute('value', choices[i])
-                    box.append(option, label)
-                }
-
-                if (i != questions.length-1) {
-                    let nextButton = document.createElement("button");
-                    nextButton.type = 'button'
-                    nextButton.innerHTML = "next"
-                    nextButton.setAttribute('id', 'submitbtn')
-
-                    box.append(nextButton)
-
-                    let opt = document.querySelectorAll(".opt")
-                    for (let i in opt) {
-                        if (opt[i].checked) {
-                            let heading = document.createElement('h2')
-                            box.innerHTML = ''
-                            if (opt[i].value === correctChoice)
-                                score++
-
-                            break;
-                        }
-                    }
-                } else {
-
-                    let submitButton = document.createElement("button");
-                    submitButton.type = 'button'
-                    submitButton.innerHTML = "Submit"
-                    submitButton.setAttribute('id', 'submitbtn')
-
-                    box.append(submitButton)
+        function showQuestion() {
 
 
+            box.innerHTML = '';
+            let question = document.createElement("h2");
+            question.innerText = questions[index].que;
+            const choices = questions[index].options;
+            let correctChoice = questions[index].correctChoice;
+            box.append(question);
 
+            for (let i = 0; i < choices.length; i++) {
 
-                    submitButton.addEventListener('click', function () {
-
-                        heading.innerHTML = "Score : " + score
-
-                        box.append(heading)
-
-
-                    }
-                    )
-
-                }
+                let option = document.createElement('input')
+                let label = document.createElement('label')
+                label.innerText = choices[i]
+                option.setAttribute('type', "radio")
+                option.setAttribute('name', "answer")
+                option.setAttribute('class', "opt")
+                option.setAttribute('value', choices[i])
+                box.append(option, label)
             }
+
+            // let submitbtn = document.getElementById('submitbtn')
+            // submitbtn.remove()
+            let WorkButton = document.createElement("button");
+            WorkButton.type = 'button'
+            WorkButton.setAttribute('id', 'submitbtn')
+            WorkButton.addEventListener('click', function () {
+
+                let opt = document.querySelectorAll(".opt")
+                for (let i in opt) {
+                    if (opt[i].checked) {
+                        let heading = document.createElement('h2')
+                        if (opt[i].value === correctChoice) score++
+                        break;
+                    }
+                }
+            })
+
+
+            if (index != questions.length - 1) {
+                WorkButton.innerHTML = "next"
+
+                box.append(WorkButton);
+                WorkButton.addEventListener('click', function () {
+                    index++;
+                    showQuestion();
+                });
+            } else {
+                let heading = document.createElement('h2')
+                WorkButton.innerHTML = "Submit"
+                box.append(WorkButton)
+                WorkButton.addEventListener('click', function () {
+                    box.innerHTML = ''
+                    heading.innerHTML = "Score : " + score
+                    box.append(heading)
+                });
+            }
+            sc.innerHTML = "SCORE : " + score
+        }
 
     </script>
 </body>
 
 </html>
+
+
+<!-- timer  -->
+<!-- data, password  -->
