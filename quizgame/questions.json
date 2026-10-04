@@ -1,0 +1,708 @@
+[
+  {
+    "que": "Which keyword is used to declare a variable whose value can be reassigned?",
+    "options": ["const", "let", "static", "fixed"],
+    "correctChoice": "let"
+  },
+  {
+    "que": "What is the output of: console.log(typeof null);",
+    "options": ["null", "object", "undefined", "boolean"],
+    "correctChoice": "object"
+  },
+  {
+    "que": "Which operator checks both value and data type?",
+    "options": ["==", "=", "===", "!="],
+    "correctChoice": "==="
+  },
+  {
+    "que": "What is the output of: console.log(2 + \"3\");",
+    "options": ["5", "\"23\"", "23", "Error"],
+    "correctChoice": "\"23\""
+  },
+  {
+    "que": "Which declaration cannot be reassigned?",
+    "options": ["var", "let", "const", "variable"],
+    "correctChoice": "const"
+  },
+  {
+    "que": "What is the output of: console.log(10 - \"2\");",
+    "options": ["102", "8", "\"8\"", "Error"],
+    "correctChoice": "8"
+  },
+  {
+    "que": "Which method converts a JSON string into a JavaScript object?",
+    "options": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.object()"],
+    "correctChoice": "JSON.parse()"
+  },
+  {
+    "que": "Which method converts a JavaScript object into a JSON string?",
+    "options": ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.convert()"],
+    "correctChoice": "JSON.stringify()"
+  },
+  {
+    "que": "What is the output of: console.log(Boolean(0));",
+    "options": ["true", "false", "0", "undefined"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "What is the output of: console.log(Boolean(\"false\"));",
+    "options": ["true", "false", "undefined", "Error"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "Which keyword is function-scoped instead of block-scoped?",
+    "options": ["let", "const", "var", "class"],
+    "correctChoice": "var"
+  },
+  {
+    "que": "What is the output of: console.log(typeof undefined);",
+    "options": ["null", "undefined", "object", "string"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "What is the output of: console.log(5 == \"5\");",
+    "options": ["true", "false", "undefined", "Error"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: console.log(5 === \"5\");",
+    "options": ["true", "false", "5", "Error"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "Which value represents an intentionally empty value?",
+    "options": ["undefined", "null", "false", "0"],
+    "correctChoice": "null"
+  },
+  {
+    "que": "What is the output of: console.log(10 / \"2\");",
+    "options": ["102", "5", "\"5\"", "NaN"],
+    "correctChoice": "5"
+  },
+  {
+    "que": "What is the output of: console.log(\"5\" * \"2\");",
+    "options": ["52", "10", "\"10\"", "NaN"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "What is the output of: console.log(\"5\" + 2 * 3);",
+    "options": ["21", "\"56\"", "\"511\"", "11"],
+    "correctChoice": "\"56\""
+  },
+  {
+    "que": "Which value is NOT a primitive data type in JavaScript?",
+    "options": ["String", "Number", "Object", "Boolean"],
+    "correctChoice": "Object"
+  },
+  {
+    "que": "What is the result of: console.log(NaN === NaN);",
+    "options": ["true", "false", "NaN", "undefined"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "What is the output of: console.log(typeof NaN);",
+    "options": ["NaN", "undefined", "number", "object"],
+    "correctChoice": "number"
+  },
+  {
+    "que": "Which method is used to check whether a value is NaN?",
+    "options": ["isNaN()", "isNull()", "checkNaN()", "Number.isNull()"],
+    "correctChoice": "isNaN()"
+  },
+  {
+    "que": "What is the output of: let x = 10; { let x = 20; console.log(x); }",
+    "options": ["10", "20", "undefined", "Error"],
+    "correctChoice": "20"
+  },
+  {
+    "que": "What is the output of: let x = 10; { let x = 20; } console.log(x);",
+    "options": ["10", "20", "undefined", "Error"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "What happens when accessing a let variable before its declaration?",
+    "options": ["Returns undefined", "Returns null", "ReferenceError", "Returns 0"],
+    "correctChoice": "ReferenceError"
+  },
+  {
+    "que": "What happens when accessing a var variable before its declaration?",
+    "options": ["ReferenceError", "Returns undefined", "Returns null", "SyntaxError"],
+    "correctChoice": "Returns undefined"
+  },
+  {
+    "que": "What is the output of: console.log(x); var x = 10;",
+    "options": ["10", "undefined", "ReferenceError", "null"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "Which keyword allows redeclaration in the same scope?",
+    "options": ["let", "const", "var", "class"],
+    "correctChoice": "var"
+  },
+  {
+    "que": "What is the output of: const arr = [1, 2]; arr.push(3); console.log(arr);",
+    "options": ["Error", "[1,2]", "[1,2,3]", "undefined"],
+    "correctChoice": "[1,2,3]"
+  },
+  {
+    "que": "Why can a const array be modified?",
+    "options": ["const makes arrays immutable", "The reference cannot change but array contents can", "JavaScript ignores const for arrays", "Arrays are primitive"],
+    "correctChoice": "The reference cannot change but array contents can"
+  },
+  {
+    "que": "What is the output of: let a = [1,2,3]; console.log(a.length);",
+    "options": ["2", "3", "4", "undefined"],
+    "correctChoice": "3"
+  },
+  {
+    "que": "Which method removes the last element from an array?",
+    "options": ["shift()", "pop()", "remove()", "delete()"],
+    "correctChoice": "pop()"
+  },
+  {
+    "que": "Which method removes the first element from an array?",
+    "options": ["pop()", "shift()", "removeFirst()", "delete()"],
+    "correctChoice": "shift()"
+  },
+  {
+    "que": "Which method adds an element to the beginning of an array?",
+    "options": ["push()", "add()", "unshift()", "prepend()"],
+    "correctChoice": "unshift()"
+  },
+  {
+    "que": "What is the output of: console.log([1,2,3].map(x => x * 2));",
+    "options": ["[1,2,3]", "[2,4,6]", "6", "[3,4,5]"],
+    "correctChoice": "[2,4,6]"
+  },
+  {
+    "que": "Which array method creates a new array containing elements that satisfy a condition?",
+    "options": ["map()", "filter()", "reduce()", "find()"],
+    "correctChoice": "filter()"
+  },
+  {
+    "que": "What is the output of: console.log([1,2,3,4].filter(x => x % 2 === 0));",
+    "options": ["[1,3]", "[2,4]", "[2]", "4"],
+    "correctChoice": "[2,4]"
+  },
+  {
+    "que": "Which method is commonly used to calculate a single result from an array?",
+    "options": ["map()", "filter()", "reduce()", "forEach()"],
+    "correctChoice": "reduce()"
+  },
+  {
+    "que": "What is the output of: console.log([1,2,3].reduce((a,b) => a + b, 0));",
+    "options": ["5", "6", "123", "0"],
+    "correctChoice": "6"
+  },
+  {
+    "que": "What does forEach() return?",
+    "options": ["A new array", "The original array", "undefined", "The array length"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "What is the output of: let a = [1,2,3]; console.log(a.indexOf(2));",
+    "options": ["0", "1", "2", "-1"],
+    "correctChoice": "1"
+  },
+  {
+    "que": "What does indexOf() return when the element is not found?",
+    "options": ["0", "null", "undefined", "-1"],
+    "correctChoice": "-1"
+  },
+  {
+    "que": "Which method checks whether an array contains a particular value?",
+    "options": ["contains()", "includes()", "has()", "exists()"],
+    "correctChoice": "includes()"
+  },
+  {
+    "que": "What is the output of: console.log([1,2,3].includes(2));",
+    "options": ["true", "false", "2", "undefined"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: let a = [1,2,3]; console.log(a.slice(1));",
+    "options": ["[1]", "[2,3]", "[1,2]", "3"],
+    "correctChoice": "[2,3]"
+  },
+  {
+    "que": "Which method modifies the original array by removing or replacing elements?",
+    "options": ["slice()", "splice()", "map()", "filter()"],
+    "correctChoice": "splice()"
+  },
+  {
+    "que": "What is the output of: let a = [1,2,3]; a.splice(1,1); console.log(a);",
+    "options": ["[1,2]", "[1,3]", "[2,3]", "[1,2,3]"],
+    "correctChoice": "[1,3]"
+  },
+  {
+    "que": "What is the output of: console.log([1,2,3].join(\"-\"));",
+    "options": ["1-2-3", "[1-2-3]", "123", "1,2,3"],
+    "correctChoice": "1-2-3"
+  },
+  {
+    "que": "What is the output of: console.log(\"JavaScript\".length);",
+    "options": ["9", "10", "11", "12"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "Which method converts a string to uppercase?",
+    "options": ["upperCase()", "toUpperCase()", "uppercase()", "convertUpper()"],
+    "correctChoice": "toUpperCase()"
+  },
+  {
+    "que": "What is the output of: console.log(\"hello\".toUpperCase());",
+    "options": ["hello", "HELLO", "Hello", "Error"],
+    "correctChoice": "HELLO"
+  },
+  {
+    "que": "What is the output of: console.log(\"JavaScript\".includes(\"Script\"));",
+    "options": ["true", "false", "Script", "undefined"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "Which method removes whitespace from both ends of a string?",
+    "options": ["trim()", "removeSpace()", "strip()", "clean()"],
+    "correctChoice": "trim()"
+  },
+  {
+    "que": "What is the output of: console.log(\"  hello  \".trim());",
+    "options": ["\"  hello  \"", "\"hello\"", "\" hello \"", "undefined"],
+    "correctChoice": "\"hello\""
+  },
+  {
+    "que": "Which method splits a string into an array?",
+    "options": ["split()", "divide()", "separate()", "toArray()"],
+    "correctChoice": "split()"
+  },
+  {
+    "que": "What is the output of: console.log(\"a,b,c\".split(\",\"));",
+    "options": ["[\"abc\"]", "[\"a\",\"b\",\"c\"]", "\"a,b,c\"", "Error"],
+    "correctChoice": "[\"a\",\"b\",\"c\"]"
+  },
+  {
+    "que": "What is the output of: console.log(\"5\".padStart(3,\"0\"));",
+    "options": ["5", "05", "005", "0005"],
+    "correctChoice": "005"
+  },
+  {
+    "que": "Which syntax is used to create a template literal?",
+    "options": ["Single quotes", "Double quotes", "Backticks", "Parentheses"],
+    "correctChoice": "Backticks"
+  },
+  {
+    "que": "What is the output of: let name = \"Harsh\"; console.log(`Hello ${name}`);",
+    "options": ["Hello name", "Hello Harsh", "${name}", "Error"],
+    "correctChoice": "Hello Harsh"
+  },
+  {
+    "que": "What is the output of: let user = {name: \"Harsh\", age: 22}; console.log(user.name);",
+    "options": ["user", "name", "Harsh", "undefined"],
+    "correctChoice": "Harsh"
+  },
+  {
+    "que": "Which notation can be used to access an object property dynamically?",
+    "options": ["object.key()", "object[key]", "object->key", "object::key"],
+    "correctChoice": "object[key]"
+  },
+  {
+    "que": "What is the output of: let obj = {a: 10}; console.log(obj.b);",
+    "options": ["null", "0", "undefined", "Error"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "Which operator provides a default value when the left side is null or undefined?",
+    "options": ["||", "??", "&&", "=>"],
+    "correctChoice": "??"
+  },
+  {
+    "que": "What is the output of: console.log(null ?? \"Guest\");",
+    "options": ["null", "Guest", "undefined", "Error"],
+    "correctChoice": "Guest"
+  },
+  {
+    "que": "What is the output of: console.log(0 ?? 10);",
+    "options": ["0", "10", "null", "undefined"],
+    "correctChoice": "0"
+  },
+  {
+    "que": "Which syntax is used to destructure an object?",
+    "options": ["const {name} = user", "const [name] = user", "const name = {user}", "const (name) = user"],
+    "correctChoice": "const {name} = user"
+  },
+  {
+    "que": "What is the output of: let [a,b] = [10,20]; console.log(b);",
+    "options": ["10", "20", "[10,20]", "undefined"],
+    "correctChoice": "20"
+  },
+  {
+    "que": "What is the output of: let {name} = {name:\"Harsh\", age:22}; console.log(name);",
+    "options": ["name", "Harsh", "22", "undefined"],
+    "correctChoice": "Harsh"
+  },
+  {
+    "que": "Which operator is used as the spread operator?",
+    "options": ["...", "***", "=>", "??"],
+    "correctChoice": "..."
+  },
+  {
+    "que": "What is the output of: let a=[1,2]; let b=[...a,3]; console.log(b);",
+    "options": ["[1,2]", "[3,1,2]", "[1,2,3]", "Error"],
+    "correctChoice": "[1,2,3]"
+  },
+  {
+    "que": "Which syntax is used to collect multiple function arguments into an array?",
+    "options": ["Spread", "Rest", "Destructuring", "Optional chaining"],
+    "correctChoice": "Rest"
+  },
+  {
+    "que": "What is the output of: function sum(...nums){ return nums.length; } console.log(sum(10,20,30));",
+    "options": ["2", "3", "30", "undefined"],
+    "correctChoice": "3"
+  },
+  {
+    "que": "What is a function passed as an argument to another function called?",
+    "options": ["Callback", "Constructor", "Generator", "Iterator"],
+    "correctChoice": "Callback"
+  },
+  {
+    "que": "What is the output of: function test(){ return; console.log(\"Hello\"); } console.log(test());",
+    "options": ["Hello", "undefined", "null", "Error"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "What does an arrow function use instead of the function keyword?",
+    "options": ["=>", "::", "->", "**"],
+    "correctChoice": "=>"
+  },
+  {
+    "que": "What is the output of: const add = (a,b) => a+b; console.log(add(2,3));",
+    "options": ["23", "5", "undefined", "Error"],
+    "correctChoice": "5"
+  },
+  {
+    "que": "What is the output of: const square = x => x*x; console.log(square(4));",
+    "options": ["8", "12", "16", "44"],
+    "correctChoice": "16"
+  },
+  {
+    "que": "What is a closure in JavaScript?",
+    "options": ["A function with access to its outer lexical scope", "A closed browser window", "A loop inside a function", "A private class"],
+    "correctChoice": "A function with access to its outer lexical scope"
+  },
+  {
+    "que": "What is the output of: function outer(){ let x=10; return function(){ return x; }; } let f=outer(); console.log(f());",
+    "options": ["undefined", "10", "Error", "null"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "Which keyword is used to create a class in JavaScript?",
+    "options": ["object", "class", "struct", "prototype"],
+    "correctChoice": "class"
+  },
+  {
+    "que": "Which method is used as a constructor inside a JavaScript class?",
+    "options": ["init()", "constructor()", "create()", "main()"],
+    "correctChoice": "constructor()"
+  },
+  {
+    "que": "What is the output of: class A { constructor(){ this.x=10; } } let a=new A(); console.log(a.x);",
+    "options": ["A", "10", "undefined", "Error"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "Which keyword refers to the current object in a method?",
+    "options": ["self", "current", "this", "object"],
+    "correctChoice": "this"
+  },
+  {
+    "que": "What is the output of: let user={name:\"Harsh\", show(){console.log(this.name)}}; user.show();",
+    "options": ["user", "name", "Harsh", "undefined"],
+    "correctChoice": "Harsh"
+  },
+  {
+    "que": "Which method is used to schedule a function after a specified delay?",
+    "options": ["setInterval()", "setTimeout()", "delay()", "wait()"],
+    "correctChoice": "setTimeout()"
+  },
+  {
+    "que": "Which method repeatedly executes a function after a specified interval?",
+    "options": ["setTimeout()", "setInterval()", "repeat()", "loop()"],
+    "correctChoice": "setInterval()"
+  },
+  {
+    "que": "What is the output order of: console.log(\"A\"); setTimeout(()=>console.log(\"B\"),0); console.log(\"C\");",
+    "options": ["A B C", "B A C", "A C B", "C A B"],
+    "correctChoice": "A C B"
+  },
+  {
+    "que": "What is the DOM?",
+    "options": ["Database Object Model", "Document Object Model", "Data Object Method", "Document Order Method"],
+    "correctChoice": "Document Object Model"
+  },
+  {
+    "que": "Which method selects an element by its ID?",
+    "options": ["querySelector()", "getElementById()", "getById()", "selectId()"],
+    "correctChoice": "getElementById()"
+  },
+  {
+    "que": "Which method can select the first element matching a CSS selector?",
+    "options": ["querySelector()", "queryAll()", "getSelector()", "selectFirst()"],
+    "correctChoice": "querySelector()"
+  },
+  {
+    "que": "Which method selects all elements matching a CSS selector?",
+    "options": ["querySelector()", "querySelectorAll()", "getAll()", "selectAll()"],
+    "correctChoice": "querySelectorAll()"
+  },
+  {
+    "que": "Which property changes the text content of an element safely?",
+    "options": ["innerHTML", "innerText", "outerHTML", "htmlText"],
+    "correctChoice": "innerText"
+  },
+  {
+    "que": "Which property can interpret HTML tags when inserting content?",
+    "options": ["innerText", "textContent", "innerHTML", "value"],
+    "correctChoice": "innerHTML"
+  },
+  {
+    "que": "Which method is used to attach an event handler?",
+    "options": ["addEventListener()", "addEvent()", "attach()", "listen()"],
+    "correctChoice": "addEventListener()"
+  },
+  {
+    "que": "What event occurs when a user clicks an element?",
+    "options": ["change", "hover", "click", "press"],
+    "correctChoice": "click"
+  },
+  {
+    "que": "Which property is used to get the value entered in an input element?",
+    "options": ["text", "value", "input", "content"],
+    "correctChoice": "value"
+  },
+  {
+    "que": "What is the output of: console.log(typeof []);",
+    "options": ["array", "object", "list", "undefined"],
+    "correctChoice": "object"
+  },
+  {
+    "que": "What is the output of: console.log([] == false);",
+    "options": ["true", "false", "undefined", "Error"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: console.log([] === false);",
+    "options": ["true", "false", "undefined", "Error"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "What is the output of: console.log(\"\" == false);",
+    "options": ["true", "false", "undefined", "Error"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: console.log(null == undefined);",
+    "options": ["true", "false", "null", "Error"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: console.log(null === undefined);",
+    "options": ["true", "false", "null", "undefined"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "Which operator returns the first falsy value?",
+    "options": ["&&", "||", "??", "=>"],
+    "correctChoice": "||"
+  },
+  {
+    "que": "What is the output of: console.log(0 || \"Hello\");",
+    "options": ["0", "Hello", "false", "undefined"],
+    "correctChoice": "Hello"
+  },
+  {
+    "que": "What is the output of: console.log(10 && 20);",
+    "options": ["10", "20", "true", "false"],
+    "correctChoice": "20"
+  },
+  {
+    "que": "Which operator provides optional access to a property without throwing an error?",
+    "options": ["??", "?.", "!!", "&&="],
+    "correctChoice": "?."
+  },
+  {
+    "que": "What is the output of: let user={}; console.log(user.address?.city);",
+    "options": ["Error", "null", "undefined", "city"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "Which object is commonly used to work with dates and times?",
+    "options": ["Time", "Date", "Calendar", "Moment"],
+    "correctChoice": "Date"
+  },
+  {
+    "que": "What is the output of: console.log(Math.max(10,20,5));",
+    "options": ["5", "10", "20", "35"],
+    "correctChoice": "20"
+  },
+  {
+    "que": "What is the output of: console.log(Math.floor(4.9));",
+    "options": ["4", "5", "4.9", "3"],
+    "correctChoice": "4"
+  },
+  {
+    "que": "What is the output of: console.log(Math.ceil(4.1));",
+    "options": ["4", "5", "4.1", "3"],
+    "correctChoice": "5"
+  },
+  {
+    "que": "Which method converts a string into an integer?",
+    "options": ["parseInt()", "parseInteger()", "toInteger()", "NumberInt()"],
+    "correctChoice": "parseInt()"
+  },
+  {
+    "que": "What is the output of: console.log(parseInt(\"25px\"));",
+    "options": ["25", "NaN", "\"25px\"", "Error"],
+    "correctChoice": "25"
+  },
+  {
+    "que": "What is the output of: console.log(Number(\"25px\"));",
+    "options": ["25", "NaN", "\"25px\"", "undefined"],
+    "correctChoice": "NaN"
+  },
+  {
+    "que": "Which function creates a Promise that is already resolved?",
+    "options": ["Promise.resolve()", "Promise.success()", "Promise.done()", "Promise.complete()"],
+    "correctChoice": "Promise.resolve()"
+  },
+  {
+    "que": "Which keyword is used to pause an async function until a Promise settles?",
+    "options": ["wait", "pause", "await", "hold"],
+    "correctChoice": "await"
+  },
+  {
+    "que": "Which keyword is used to declare a function that returns a Promise?",
+    "options": ["promise", "async", "await", "defer"],
+    "correctChoice": "async"
+  },
+  {
+    "que": "Which method handles a successfully resolved Promise?",
+    "options": ["catch()", "then()", "success()", "resolve()"],
+    "correctChoice": "then()"
+  },
+  {
+    "que": "Which method handles a rejected Promise?",
+    "options": ["catch()", "error()", "reject()", "fail()"],
+    "correctChoice": "catch()"
+  },
+  {
+    "que": "What is the output of: Promise.resolve(10).then(x => console.log(x));",
+    "options": ["undefined", "10", "Promise", "Error"],
+    "correctChoice": "10"
+  },
+  {
+    "que": "Which method waits for multiple Promises to resolve successfully?",
+    "options": ["Promise.all()", "Promise.wait()", "Promise.multiple()", "Promise.group()"],
+    "correctChoice": "Promise.all()"
+  },
+  {
+    "que": "What does Array.isArray([]) return?",
+    "options": ["true", "false", "object", "array"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What does Object.keys({a:1,b:2}).length return?",
+    "options": ["1", "2", "3", "undefined"],
+    "correctChoice": "2"
+  },
+  {
+    "que": "What is the output of: let a={x:1}; let b=a; b.x=5; console.log(a.x);",
+    "options": ["1", "5", "undefined", "Error"],
+    "correctChoice": "5"
+  },
+  {
+    "que": "Why does changing b.x also change a.x in the previous example?",
+    "options": ["Objects are copied automatically", "Both variables reference the same object", "JavaScript uses global variables", "Objects are primitive values"],
+    "correctChoice": "Both variables reference the same object"
+  },
+  {
+    "que": "What is the output of: let a=[1,2]; let b=a; b.push(3); console.log(a);",
+    "options": ["[1,2]", "[1,2,3]", "[3]", "Error"],
+    "correctChoice": "[1,2,3]"
+  },
+  {
+    "que": "Which loop is best suited for iterating over the values of an iterable?",
+    "options": ["for...in", "for...of", "while...in", "foreach...of"],
+    "correctChoice": "for...of"
+  },
+  {
+    "que": "Which loop is generally used to iterate over object property keys?",
+    "options": ["for...of", "for...in", "forEach...in", "object...of"],
+    "correctChoice": "for...in"
+  },
+  {
+    "que": "What is the output of: for(let i=0;i<3;i++){ console.log(i); }",
+    "options": ["1 2 3", "0 1 2", "0 1 2 3", "3 2 1"],
+    "correctChoice": "0 1 2"
+  },
+  {
+    "que": "What does the break statement do inside a loop?",
+    "options": ["Skips one iteration", "Stops the loop", "Restarts the loop", "Pauses the loop"],
+    "correctChoice": "Stops the loop"
+  },
+  {
+    "que": "What does continue do inside a loop?",
+    "options": ["Stops the loop", "Skips the current iteration", "Restarts the program", "Exits the function"],
+    "correctChoice": "Skips the current iteration"
+  },
+  {
+    "que": "What is the output of: let x=5; if(x>3) console.log(\"A\"); else console.log(\"B\");",
+    "options": ["A", "B", "AB", "Error"],
+    "correctChoice": "A"
+  },
+  {
+    "que": "What is the output of: console.log(!!\"hello\");",
+    "options": ["true", "false", "\"hello\"", "undefined"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: console.log(!!0);",
+    "options": ["true", "false", "0", "undefined"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "What is the output of: let x=1; console.log(x++);",
+    "options": ["1", "2", "0", "undefined"],
+    "correctChoice": "1"
+  },
+  {
+    "que": "What is the output of: let x=1; console.log(++x);",
+    "options": ["1", "2", "3", "undefined"],
+    "correctChoice": "2"
+  },
+  {
+    "que": "What is the output of: let x=5; x += 3; console.log(x);",
+    "options": ["5", "8", "53", "undefined"],
+    "correctChoice": "8"
+  },
+  {
+    "que": "What is the output of: console.log(3 > 2 && 5 > 10);",
+    "options": ["true", "false", "3", "5"],
+    "correctChoice": "false"
+  },
+  {
+    "que": "What is the output of: console.log(3 > 2 || 5 > 10);",
+    "options": ["true", "false", "3", "10"],
+    "correctChoice": "true"
+  },
+  {
+    "que": "What is the output of: function test(){ let x=10; } console.log(typeof x);",
+    "options": ["number", "undefined", "ReferenceError", "null"],
+    "correctChoice": "undefined"
+  },
+  {
+    "que": "What is the output of: const f = () => ({name:\"Harsh\"}); console.log(f().name);",
+    "options": ["f", "Harsh", "undefined", "Error"],
+    "correctChoice": "Harsh"
+  }
+]
+
